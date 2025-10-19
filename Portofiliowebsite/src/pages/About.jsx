@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import resumePdf from '../components/Pdffile/apsara A.pdf'
 
 function About() {
   const [activeSection, setActiveSection] = useState(0)
@@ -144,10 +145,14 @@ function About() {
 
                   {/* CTA Buttons */}
                   <div className="flex flex-wrap gap-4 justify-center">
-                    <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2">
+                    <a
+                      href={resumePdf}
+                      download="Apsara_Aryal_Resume.pdf"
+                      className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2"
+                    >
                       <span>📄</span>
                       <span>Download Resume</span>
-                    </button>
+                    </a>
                     <button className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-full hover:border-blue-500 hover:text-blue-600 transition-all duration-300 flex items-center space-x-2">
                       <span>💼</span>
                       <span>View Projects</span>

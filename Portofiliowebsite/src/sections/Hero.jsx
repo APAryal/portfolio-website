@@ -4,6 +4,9 @@ import { FaArrowDown, FaGithub, FaLinkedin, FaDownload } from 'react-icons/fa'
 import { HiSparkles } from 'react-icons/hi'
 import TypingEffect from '../components/TypingEffect'
 import Button from '../components/Button'
+import profileImg from '../assets/profile/Portfolio.png'
+import resumePdf from '../components/Pdffile/apsara A.pdf'
+
 
 function Hero() {
   const scrollToAbout = () => {
@@ -76,7 +79,7 @@ function Hero() {
            <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
 
             <Button
-            href='/assest/resume/Apsara_Aryal_Resume.pdf'
+            href={resumePdf}
             download="Apsara_Aryal_Resume.pdf"
             variant="primary"
             size="lg"
@@ -107,9 +110,11 @@ function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full p-1">
                   <div className="w-full h-full bg-slate-900 rounded-full p-4">
                     <img
-                      src="/src/assets/profile/Portfolio.png"
+                      src={profileImg}
                       alt="Apsara Aryal"
                       className="w-full h-full object-cover rounded-full"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 </div>
